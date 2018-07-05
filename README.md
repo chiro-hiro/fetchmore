@@ -1,14 +1,14 @@
-# react-ajax
+# fetchmore
 React Ajax
 
 ## Installation
 ```
-$ npm i react-ajax
+$ npm i fetchmore
 ```
 
 ## GET method
 ```javascript
-import ajax from 'react-ajax';
+import fetchmore from 'fetchmore';
 
 ajax({
     url: 'http://localhost/?'
@@ -24,7 +24,7 @@ http://localhost/?username=chiro&email=chiro%40fkguru.com
 
 ## POST method
 ```javascript
-import ajax from 'react-ajax';
+import fetchmore from 'fetchmore';
 
 ajax({
     url: 'http://localhost/',
@@ -55,4 +55,4 @@ username=chiro&email=chiro%40fkguru.com&products[id][0]=3&products[name][0]=cake
 ```
 
 # License
-This package distributed under [MIT License](https://github.com/chiro-hiro/react-ajax/blob/master/LICENSE)
+This package distributed under [MIT License](https://github.com/chiro-hiro/fetchmore/blob/master/LICENSE)

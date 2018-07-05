@@ -1,5 +1,5 @@
 {
-  "name": "react-ajax",
+  "name": "fetchmore",
   "version": "1.0.0",
   "description": "Ajax for React",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chiro-hiro/react-ajax.git"
+    "url": "git+https://github.com/chiro-hiro/fetchmore.git"
   },
   "keywords": [
     "react",
@@ -18,7 +18,7 @@
   "author": "chiro@fkguru.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/chiro-hiro/react-ajax/issues"
+    "url": "https://github.com/chiro-hiro/fetchmore/issues"
   },
-  "homepage": "https://github.com/chiro-hiro/react-ajax#readme"
+  "homepage": "https://github.com/chiro-hiro/fetchmore#readme"
 }
