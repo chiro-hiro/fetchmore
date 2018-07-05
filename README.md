@@ -1,5 +1,5 @@
-# fetchmore
-React Ajax
+# Fetch More
+React Ajax based on browser's native `fetch()`.
 
 ## Installation
 ```
@@ -10,7 +10,7 @@ $ npm i fetchmore
 ```javascript
 import fetchmore from 'fetchmore';
 
-ajax({
+fetchmore({
     url: 'http://localhost/?'
 }, {
     username: 'chiro',
@@ -26,7 +26,7 @@ http://localhost/?username=chiro&email=chiro%40fkguru.com
 ```javascript
 import fetchmore from 'fetchmore';
 
-ajax({
+fetchmore({
     url: 'http://localhost/',
     method: 'POST'
 }, {

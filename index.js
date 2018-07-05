@@ -30,7 +30,7 @@ function buildData(object, data, parentName) {
     return data.join('&');
 }
 
-function ajax(request, data, callback, errorCallback) {
+function fetchmore(request, data, callback, errorCallback) {
     request = request || {};
     request.url = request.url || '/';
     request.method = request.method || 'GET';
@@ -57,4 +57,4 @@ function ajax(request, data, callback, errorCallback) {
     }, errorCallback);
 }
 
-module.exports = ajax;
+module.exports = fetchmore;
