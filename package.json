@@ -1,0 +1,24 @@
+{
+  "name": "react-ajax",
+  "version": "1.0.0",
+  "description": "Ajax for React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiro-hiro/react-ajax.git"
+  },
+  "keywords": [
+    "react",
+    "ajax",
+    "reactjs"
+  ],
+  "author": "chiro@fkguru.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiro-hiro/react-ajax/issues"
+  },
+  "homepage": "https://github.com/chiro-hiro/react-ajax#readme"
+}
