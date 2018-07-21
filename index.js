@@ -10,7 +10,7 @@ function buildData(object, data, parentName) {
             var tmpArray = object[index];
             for (var i = 0; i < tmpArray.length; i++) {
                 for (var field in tmpArray[i]) {
-                    data.push(encodeURIComponent(index) + '[' + encodeURIComponent(field) + '][' + i.toString() + ']' + '=' + encodeURIComponent(tmpArray[i][field]));
+                    data.push(encodeURIComponent(index) + '[' + i.toString() + '][' + encodeURIComponent(field) + ']' + '=' + encodeURIComponent(tmpArray[i][field]));
                 }
             }
         }
