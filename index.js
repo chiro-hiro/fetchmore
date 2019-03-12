@@ -10,7 +10,7 @@ function buildData(object, data, parentName) {
       var tmpArray = object[index];
       for (var i = 0; i < tmpArray.length; i++) {
         for (var field in tmpArray[i]) {
-          data.push(encodeURIComponent(index) + '[' + i.toString() + '][' + encodeURIComponent(field) + ']' + '=' + encodeURIComponent(tmpArray[i][field]));
+          data.push(`${encodeURIComponent(index)}[${i.toString()}][${encodeURIComponent(field)}]=${encodeURIComponent(tmpArray[i][field])}`);
         }
       }
     }
@@ -19,10 +19,10 @@ function buildData(object, data, parentName) {
     }
     else {
       if (parentName === '') {
-        data.push(encodeURIComponent(index) + '=' + encodeURIComponent(object[index]));
+        data.push(`${encodeURIComponent(index)}=${encodeURIComponent(object[index])}`);
       }
       else {
-        data.push(encodeURIComponent(parentName) + '[' + encodeURI(index) + ']' + '=' + encodeURIComponent(object[index]));
+        data.push(`${encodeURIComponent(parentName)}[${encodeURI(index)}]=${encodeURIComponent(object[index])}`);
       }
 
     }
@@ -41,18 +41,22 @@ function fetchmore(request, data, callback, errorCallback) {
     request.url += buildData(data);
   }
   if (request.method === 'POST') {
-    if (typeof (request.headers['content-type']) === 'undefined') {
-      request.headers['content-type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
+    if (typeof (request.headers['Content-Type']) === 'undefined') {
+      request.headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=UTF-8';
     }
-    request.body = buildData(data);
+    if ((/application\/json/i).test(request.headers['Content-Type'])) {
+      request.body = JSON.stringify(data);
+    } else {
+      request.body = buildData(data);
+    }
   }
   fetch(new Request(request.url, request))
     .then((response) => {
       response.json()
         .then((resData) => callback(resData))
-        .catch(error => errorCallback(error));
+        .catch(error => callback(error));
     })
-    .catch(error => errorCallback(error));
+    .catch(error => callback(error));
 }
 
 module.exports = fetchmore;

@@ -1,6 +1,6 @@
 {
   "name": "fetchmore",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Fetch more for React",
   "main": "index.js",
   "scripts": {
